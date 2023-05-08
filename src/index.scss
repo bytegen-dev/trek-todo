@@ -93,6 +93,7 @@ body{
         width: 100%;
         overflow-y: scroll;
         z-index: 1;
+        @include transitionEase(0.5s);
 
 
         nav{
@@ -692,7 +693,6 @@ body{
         .dashboard{
             overflow-x: hidden !important;
             // transform: translateX(0);
-            @include transitionEase(0.5s);
             opacity: 1;
             visibility: visible;
         }
