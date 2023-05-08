@@ -41,7 +41,8 @@ function Main() {
     setMainUi((prev)=>{
       return ({
         ...prev,
-        showNewTask: false
+        showNewTask: false,
+        showMenu: false
       })
     })
   }
