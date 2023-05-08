@@ -114,6 +114,7 @@ body{
                 @include flexBetween(row);
                 width: 100%;
                 padding: 10px 5vw;
+                max-width: 1300px;
 
                 .about-user{
                     @include flexCenter(row);
@@ -160,13 +161,19 @@ body{
         .tasks-content{
             border-top: 1px solid rgb(206, 206, 219);
             padding: 0 5vw;
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            
             .incomplete, .complete{
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
                 padding: 30px 0;
                 position: relative;
+                max-width: 1100px;
 
                 h3{
                     padding-left: 20px;
