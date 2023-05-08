@@ -98,6 +98,9 @@ body{
         overflow-y: scroll;
         z-index: 1;
         @include transitionEase(0.5s);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
 
         nav{
@@ -311,7 +314,7 @@ body{
             gap: 10px;
             padding: 20px;
             width: 90%;
-            margin-left: 5%;
+            max-width: 300px;
             border-radius: 14px;
             margin-top: 50px;
             margin-bottom: 30px;
