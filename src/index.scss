@@ -464,6 +464,11 @@ body{
             visibility: visible;
         }
 
+        .dashboard{
+            opacity: 0;
+            visibility: hidden;
+        }
+
     }
 
     &.show-menu{
@@ -687,7 +692,9 @@ body{
         .dashboard{
             overflow-x: hidden !important;
             // transform: translateX(0);
-            @include transitionEase(0.5s)
+            @include transitionEase(0.5s);
+            opacity: 1;
+            visibility: visible;
         }
 
         &.show-menu .dashboard{
