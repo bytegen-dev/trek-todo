@@ -465,11 +465,6 @@ body{
             visibility: visible;
         }
 
-        .dashboard{
-            opacity: 0;
-            visibility: hidden;
-        }
-
     }
 
     &.show-menu{
@@ -708,7 +703,12 @@ body{
         }
 
         .menu{
-            background-color: $primary-color !important;
+            backdrop-filter: blur(10px);
+            background-color: #fffd !important;
+        }
+
+        .dashboard{
+            opacity: 1 !important;
         }
     }
 
