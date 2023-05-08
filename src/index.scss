@@ -729,10 +729,7 @@ body{
     }
 
     @media screen and (max-width: 699px) {
-        .hamburger{
-            border-color: transparent !important;
-        }
-
+        
         .menu{
             backdrop-filter: blur(10px);
             background-color: #fffd !important;
@@ -743,6 +740,9 @@ body{
         }
     }
 
+    .hamburger{
+        border-color: transparent !important;
+    }
 }
 
 ::-webkit-scrollbar{
