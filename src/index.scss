@@ -702,6 +702,16 @@ body{
         }
     }
 
+    @media screen and (max-width: 699px) {
+        .hamburger{
+            border-color: transparent !important;
+        }
+
+        .menu{
+            background-color: $primary-color !important;
+        }
+    }
+
 }
 
 ::-webkit-scrollbar{
