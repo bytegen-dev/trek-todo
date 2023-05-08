@@ -65,6 +65,8 @@ body{
         z-index: 2;
         width: 50vw;
         height: 50vw;
+        max-width: 500px;
+        max-height: 500px;
         bottom: -10vw;
         right: -10vw;
         border-radius: 50%;
@@ -78,8 +80,10 @@ body{
         content: "";
         z-index: 2;
         width: 50vw;
-        filter: blur(20px);
         height: 50vw;
+        max-width: 500px;
+        max-height: 500px;
+        filter: blur(20px);
         bottom: -10vw;
         right: -10vw;
         border-radius: 50%;
