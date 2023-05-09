@@ -48,6 +48,15 @@ function NewTask(props) {
     function addTask(event){
         event.preventDefault()
         dataRecieved.addTask(newTaskData)
+        props.hideNewTask()
+        setTimeout(()=>{
+            setNewTaskData((prev)=>{
+                return ({
+                    ...prev,
+                    taskName: '',
+                })
+            })
+        }, 500)
     }
     
     function exit(){
