@@ -90,7 +90,7 @@ function NewTask(props) {
     }, [])
 
   return (
-    <div ref={newTaskRef} className={props.showingNewTask?'new-task-big show':'new-task-big'} onTouchMove={swipeActivated}>
+    <div ref={newTaskRef} className={props.showingNewTask?'new-task-big show':'new-task-big'} onTouchStart={swipeActivated}>
       <div className="closing"></div>
       <div className="content">
         <form onSubmit={addTask}>
