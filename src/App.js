@@ -7,6 +7,7 @@ import './index.scss'
 import LoginContext from './Contexts/LoginContext'
 import { useReducer } from 'react'
 import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 
 function App() {
   const APPINITIAL = {
@@ -217,6 +218,14 @@ function App() {
   //   const appDataTemp = JSON.stringify(appData)
   //   window.localStorage.setItem('storedTaskData', appDataTemp)
   // },[appData])
+
+  useEffect(()=>{
+    const preloader = document.querySelector('.preloader')
+    window.addEventListener('load', ()=>{
+      console.log('loaded')
+      preloader.classList.add('hide')
+    })
+  }, [])
 
   return (
     <LoginContext.Provider value={appData}>

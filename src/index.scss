@@ -887,24 +887,14 @@ body{
         left: 0;
         z-index: 200;
         @include flexCenter(row);
-        animation: preloader-hide 0.3s ease forwards;
-        animation-delay: 2s;
+        @include transitionEase(0.3s);
+        transition-delay: 2s;
 
-        @keyframes preloader-hide{
-            0%{
-                opacity: 1;
-                visibility: visible;
-            }
-            // 0%{
-            //     opacity: 1;
-            //     visibility: visible;
-            // }
-            100%{
-                opacity: 0;
-                visibility: hidden;
-            }
+        &.hide{
+            opacity: 0;
+            visibility: hidden;
         }
-
+        
         .preloader-circle{
             width: 60px;
             height: 60px;
@@ -947,26 +937,16 @@ body{
         .preloader{
             // filter: invert(10);
             background-color: #000c;
-            animation: none;
-            animation: preloader-hidex 0.8s ease forwards;
-            animation-delay: 2s;
-
-            @keyframes preloader-hidex{
-                0%{
-                    visibility: visible;
-                    transform: translateX(0);
-                }
-                // 0%{
-                //     opacity: 1;
-                //     visibility: visible;
-                // }
-                100%{
-                    transform: translateX(-100vw);
-                    visibility: hidden;
-                }
-            }
+            @include transitionEase(0.8s);
+            transition-delay: 2s;
+            
             // background-color: transparent;
             // background-color: #3d3d64;
+            &.hide{
+                opacity: 1;
+                transform: translateX(-100vw);
+                visibility: hidden;
+            }
 
             .preloader-circle{
                 filter: invert(10);
