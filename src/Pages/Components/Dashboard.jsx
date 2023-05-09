@@ -113,7 +113,7 @@ function Dashboard(props) {
     <div className='dashboard'>
       <nav className="nav">
         <div className="content">
-            <div className="about-user" onClick={()=>{
+            <div className="about-user" style={{cursor: 'pointer'}} onClick={()=>{
                 window.location.reload()
             }}>
                 {/* <img src="img/user.png" alt="dp" />

@@ -116,7 +116,7 @@ function NewTask(props) {
                 <input value={newTaskData.taskName} onChange={handleChange} required type="text" id='tasknametemp' maxLength={'50'} />
             </div>
             <div className='submit'>
-                <div className='exit' onClick={exit}>cancel</div>
+                <div style={{cursor: 'pointer'}} className='exit' onClick={exit}>cancel</div>
                 <button>save <i className="fa fa-arrow-right"></i></button>
             </div>
         </form>
