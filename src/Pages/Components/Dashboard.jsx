@@ -1,13 +1,103 @@
 import React from 'react'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
+import { useState } from 'react'
+import LoginContext from '../../Contexts/LoginContext'
 
 function Dashboard(props) {
+    const [currentDate, setCurrentDate] = useState({
+        month: 'January',
+        dateDay: '1',
+        year: '2023'
+    })
+
+  const dataRecieved = useContext(LoginContext)
+
+
+    
+    useLayoutEffect(()=>{
+        const today = new Date()
+        // const day = today.getDay()
+        const dateDay = today.getDate()
+        const month = today.getMonth() + 1
+        const year = today.getFullYear()
+
+        const months = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+        setCurrentDate({
+            month: months[month],
+            dateDay: dateDay,
+            year: year.toString(),
+        })
+
+    }, [])
+
+    const unCheckedTasks = dataRecieved.tasksUnchecked.map(task =>{
+        return (
+            <div key={task.taskId} className="task to-check">
+                <div className="task-checkbox" onClick={()=>{
+                    task.checkTask({
+                        taskName: task.taskName,
+                        taskType: task.taskType,
+                        taskId: task.taskId
+                    })
+                }}>
+                    <i className="fa fa-check"></i>
+                </div>
+                <div className="task-details">
+                    <div className="task-name">
+                        {task.taskName}
+                    </div>
+                    <div className="task-type">
+                        <img src={`img/${task.taskType}.png`} alt="meeting" />
+                        <span>{task.taskType}</span>
+                    </div>
+                </div>
+                <div className="delete-task">
+                    <i className="fa fa-trash"></i>
+                    <i className="fa fa-close"></i>
+                </div>
+            </div>
+        )
+    })
+
+    const checkedTasks = dataRecieved.tasksChecked.map((task)=>{
+        return (
+            <div key={task.taskId} className="task checked">
+                <div className="task-checkbox" onClick={()=>{
+                    task.unCheckTask({
+                        taskName: task.taskName,
+                        taskType: task.taskType,
+                        taskId: task.taskId
+                    })
+                }}>
+                    <i className="fa fa-check"></i>
+                </div>
+                <div className="task-details">
+                    <div className="task-name">
+                        {task.taskName}
+                    </div>
+                    <div className="task-type">
+                        <img src={`img/${task.taskType}.png`} alt="meeting" />
+                        <span>{task.taskType}</span>
+                    </div>
+                </div>
+                <div className="delete-task">
+                    <i className="fa fa-trash"></i>
+                    <i className="fa fa-close"></i>
+                </div>
+            </div>
+        )
+    })
+
+
   return (
     <div className='dashboard'>
       <nav className="nav">
         <div className="content">
             <div className="about-user">
                 <img src="img/user.png" alt="dp" />
-                <span>Guest</span>
+                <span>{dataRecieved.user.name}</span>
             </div>
             <div className="hamburger" onClick={props.showMenu}>
                 <i className="fa fa-bars"></i>
@@ -18,99 +108,33 @@ function Dashboard(props) {
       <header className="header">
 
         <div className="today-date">
-            <h1>May 8, 2023</h1>
+            <h1>{currentDate.month} {currentDate.dateDay}, {currentDate.year}</h1>
         </div>
 
         <div className="tasks-data">
             <span>
-                6 incomplete, 3 complete
+                {dataRecieved.tasksUnchecked.length} incomplete, {dataRecieved.tasksChecked.length} complete
             </span>
         </div>
 
       </header>
 
       <div className='tasks-content'>
-        <div className="incomplete">
+        {dataRecieved.tasksUnchecked.length >= 1 && <div className="incomplete">
             <h3>incomplete</h3>
-            <div className="task to-check">
-                <div className="task-checkbox">
-                    <i className="fa fa-check"></i>
-                </div>
-                <div className="task-details">
-                    <div className="task-name">
-                        Interview Daniel Samson
-                    </div>
-                    <div className="task-type">
-                        <img src="img/online-meeting.png" alt="meeting" />
-                        <span>Meeting</span>
-                    </div>
-                </div>
-                <div className="delete-task">
-                    <i className="fa fa-trash"></i>
-                    <i className="fa fa-close"></i>
-                </div>
-            </div>
-            <div className="task to-check">
-                <div className="task-checkbox">
-                    <i className="fa fa-check"></i>
-                </div>
-                <div className="task-details">
-                    <div className="task-name">
-                        Purchase data today (2gb)
-                    </div>
-                    <div className="task-type">
-                        <img src="img/finance.png" alt="meeting" />
-                        <span>Finance</span>
-                    </div>
-                </div>
-                <div className="delete-task">
-                    <i className="fa fa-trash"></i>
-                    <i className="fa fa-close"></i>
-                </div>
-            </div>
-        </div>
-        <div className="complete">
+            {unCheckedTasks}
+        </div>}
+        {dataRecieved.tasksChecked.length >= 1 && <div className="complete">
             <h3>complete</h3>
-            <div className="task checked">
-                <div className="task-checkbox">
-                    <i className="fa fa-check"></i>
-                </div>
-                <div className="task-details">
-                    <div className="task-name">
-                        Quiet time Today
-                    </div>
-                    <div className="task-type">
-                        <img src="img/prayer.png" alt="bible" />
-                        <span>Religious</span>
-                    </div>
-                </div>
-                <div className="delete-task">
-                    <i className="fa fa-trash"></i>
-                    <i className="fa fa-close"></i>
-                </div>
-            </div>
-            <div className="task checked">
-                <div className="task-checkbox">
-                    <i className="fa fa-check"></i>
-                </div>
-                <div className="task-details">
-                    <div className="task-name">
-                        Call Williams
-                    </div>
-                    <div className="task-type">
-                        <img src="img/love.png" alt="bible" />
-                        <span>Love</span>
-                    </div>
-                </div>
-                <div className="delete-task">
-                    <i className="fa fa-trash"></i>
-                    <i className="fa fa-close"></i>
-                </div>
-            </div>
-        </div>
+            {checkedTasks}
+        </div>}
       </div>
 
-      <button className='clear-tasks'>Clear Completed <i className="fa fa-circle-exclamation"></i></button>
+      {dataRecieved.tasksChecked.length >= 1 && <button className='clear-tasks' onClick={dataRecieved.clearCompleted}>Clear Completed <i className="fa fa-circle-exclamation"></i></button>}
+
+      {dataRecieved.tasksUnchecked.length + dataRecieved.tasksChecked.length < 1 &&<div className="no-tasks-here">
+        No Tasks Yet <img src="img/sad.gif" alt="empty" />
+      </div>}
 
       <div onClick={props.showNewTask} className='new-task' to={'/main/new-task'}>
         <i className="fa fa-plus"></i>

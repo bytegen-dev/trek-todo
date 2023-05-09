@@ -9,7 +9,7 @@ function Main() {
     showMenu: false,
     showNewTask: false,
   })
-
+  
   function showMenu(){
     setMainUi((prev)=>{
       return ({
@@ -51,7 +51,7 @@ function Main() {
     <div className={mainUi.showMenu ? 'show-menu main' : 'main'}>
       <Dashboard showMenu={showMenu} showNewTask={showNewTask} />
       <MainMenu hideMenu={hideMenu} />
-      <NewTask showingNewTask={mainUi.showNewTask}/>
+      <NewTask hideNewTask={hideNewTask} showingNewTask={mainUi.showNewTask}/>
       <div onClick={hideNewTask} className={mainUi.showNewTask?"backdrop show":"backdrop"}></div>
     </div>
   )
