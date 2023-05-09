@@ -157,7 +157,9 @@ function Dashboard(props) {
       </div>}
 
       <div onClick={props.showNewTask} className='new-task' to={'/main/new-task'}>
-        <i className="fa fa-plus"></i>
+        <div className="content">
+            <i className="fa fa-plus"></i>
+        </div>
       </div>
 
     </div>

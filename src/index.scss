@@ -881,11 +881,22 @@ body{
         .main{
 
             .dashboard{
-                filter: invert(10);
 
-                .about-user{
-                    i{
+                .header{
+                    filter: invert(10);
+                }
+
+                .tasks-content{
+                    filter: invert(10);
+                }
+
+                nav{
+                    background-color: transparent;
+                    .content{
                         filter: invert(10);
+                        .about-user i{
+                            filter: invert(10);
+                        }
                     }
                 }
 
@@ -897,6 +908,13 @@ body{
                 
                 .clear-tasks{
                     i{
+                        filter: invert(10);
+                    }
+                }
+
+                .new-task{
+                    background-color: gold;
+                    .content{
                         filter: invert(10);
                     }
                 }
