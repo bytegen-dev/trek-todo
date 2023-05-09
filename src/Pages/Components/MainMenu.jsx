@@ -18,7 +18,7 @@ function MainMenu(props) {
             <Link to={'/about'}>About</Link>
             <Link className='hidden' to={'/install-guide'}>Install App (offline)</Link>
             <Link className='hidden' to={'/collections'}>Collections</Link>
-            <Link to={'/settings'}>Settings</Link>
+            <Link className='hidden' to={'/settings'}>Settings</Link>
         </div>
         <div className="social-links">
             <a href="#!"><i className="fa-brands fa-twitter"></i></a>

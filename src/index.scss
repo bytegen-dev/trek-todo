@@ -121,7 +121,7 @@ body{
 
                 .about-user{
                     @include flexCenter(row);
-                    gap: 10px;
+                    // gap: 10px;
                     font-family: monospace;
                     font-weight: 700;
                     font-size: 24px;
@@ -133,14 +133,24 @@ body{
                         transform: translateY(-2px);
                     }
 
-                    i{
-                        color: rgb(223, 2, 2);
+                    span{
+                        font-family: monospace;
+                        margin-left: 10px;
+                    }
+                    
+                    @media screen and (max-width: 700px) {
+                        font-weight: 700;
+                        font-size: 20px;
+                        word-spacing: -3px;
+
+                        span{
+                            display: none;
+                        }
                     }
 
-                    span{
-                        color: $secondary-color;
-                        font-weight: 600;
-                        text-transform: capitalize;
+                    i{
+                        color: rgb(223, 2, 2);
+                        margin-left: 10px;
                     }
                 }
 
