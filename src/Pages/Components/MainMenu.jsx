@@ -26,10 +26,10 @@ function MainMenu(props) {
             <Link className='hidden' to={'/settings'}>Settings</Link>
         </div>
         <div className="social-links">
-            <a href="#!"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#!"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="#!"><i className="fa fa-globe"></i></a>
-            <a href="#!"><i className="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/tertiux44" target={'_blank'} rel={'noreferrer'}><i className="fa-brands fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/tertiux44" target={'_blank'} rel={'noreferrer'}><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/+2347035658853" target={'_blank'} rel={'noreferrer'}><i className="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/tertiux" target={'_blank'} rel={'noreferrer'}><i className="fa-brands fa-github"></i></a>
         </div>
       </div>
     </div>
