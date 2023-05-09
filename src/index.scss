@@ -931,6 +931,11 @@ body{
                     .delete-task{
                         filter: invert(10);
                     }
+
+                    .task-name{
+                        filter: invert(10);
+                        color: $primary-color;
+                    }
                 }
 
                 .new-task{
