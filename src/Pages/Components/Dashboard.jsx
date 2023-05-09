@@ -113,7 +113,9 @@ function Dashboard(props) {
     <div className='dashboard'>
       <nav className="nav">
         <div className="content">
-            <div className="about-user">
+            <div className="about-user" onClick={()=>{
+                window.location.reload()
+            }}>
                 {/* <img src="img/user.png" alt="dp" />
                 <span>{dataRecieved.user.name}</span> */}
                 Trek<span>ToDo</span>_ <img src="img/goal.png" alt="trek-logo" />
