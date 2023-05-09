@@ -17,7 +17,7 @@ function NewTask(props) {
             const swipeEnd = eventx.changedTouches[0].clientY
             
             if(swipeEnd > (swipeStart + 150)){
-                props.hideNewTask()
+                // props.hideNewTask()
                 // console.log(swipeStart, swipeEnd)
             } else{
                 // console.log(swipeStart, swipeEnd)
