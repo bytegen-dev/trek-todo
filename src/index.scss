@@ -907,7 +907,23 @@ body{
                 }
                 
                 .clear-tasks{
+                    filter: invert(10);
+                    background-color: #eee !important;
+                    color: #3d3d64 !important;
+
+                    &:hover{
+                        opacity: 0.4;
+                    }
                     i{
+                        filter: invert(10);
+                    }
+                }
+
+                .task{
+                    &:hover, &:focus{
+                        background-color: #ccc !important;
+                    }
+                    .delete-task{
                         filter: invert(10);
                     }
                 }
