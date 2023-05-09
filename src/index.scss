@@ -954,6 +954,7 @@ body{
                     // filter: invert(10);
                     background-color: transparent;
                     // color: $primary-color;
+                    border-color: rgba($secondary-color, 0.8) !important;
                 }
 
                 .closing{
