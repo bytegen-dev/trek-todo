@@ -1,12 +1,17 @@
 import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import LoginContext from '../../Contexts/LoginContext'
 
 function MainMenu(props) {
+    const dataRecieved = useContext(LoginContext)
   return (
     <div className='menu'>
       <div className="content">
         <nav>
-            <div className="theme">
+            <div className="theme" onClick={()=>{
+                dataRecieved.toggleTheme()
+            }}>
                 <img src="img/theme.png" alt="adjust" />
             </div>
             <div className="hamburger" onClick={props.hideMenu}>

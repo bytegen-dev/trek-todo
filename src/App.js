@@ -220,7 +220,7 @@ function App() {
 
   return (
     <LoginContext.Provider value={appData}>
-      <div className='container'>
+      <div className={appData.darkTheme ? 'container dark' : 'container'}>
         <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='/main' element={<Main />}/>
