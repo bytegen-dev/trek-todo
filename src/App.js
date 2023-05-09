@@ -184,7 +184,7 @@ function App() {
                 dispatch({target: 'clearCompleted'})
               }
             }
-            console.log(tobeRecieved)
+            // console.log(tobeRecieved)
             return({
               ...state,
               ...tobeRecieved,
