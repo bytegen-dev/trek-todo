@@ -22,6 +22,9 @@ function App() {
     addTask: (taskToAdd)=>{
       dispatch({target: 'addTask', taskToAdd})
     },
+    deleteTask: (taskToDelete, taskTypeToDelete)=>{
+      dispatch({target: 'deleteTask', taskToDelete, taskTypeToDelete})
+    },
     clearCompleted: ()=>{
       dispatch({target: 'clearCompleted'})
     }
@@ -103,6 +106,32 @@ function App() {
               ...state,
               tasksChecked: []
             })
+          case 'deleteTask':
+            // var thisTask = action.taskToDelete
+            var thisTaskType = action.taskTypeToDelete
+            let newList
+            
+            if(thisTaskType === 'checked'){
+              newList = state.tasksChecked.filter((task)=>{
+                return (task.taskId !== action.taskToDelete.taskId)
+              })
+              return({
+                ...state,
+                tasksChecked: [
+                  ...newList
+                ]
+              })
+            } else{
+              newList = state.tasksUnchecked.filter((task)=>{
+                return (task.taskId !== action.taskToDelete.taskId)
+              })
+              return({
+                ...state,
+                tasksUnchecked: [
+                  ...newList
+                ]
+              })
+            }
       default:
         return({
           ...state

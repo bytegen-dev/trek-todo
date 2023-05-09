@@ -54,7 +54,16 @@ function Dashboard(props) {
                     </div>
                 </div>
                 <div className="delete-task">
-                    <i className="fa fa-trash"></i>
+                    <div className="delete" onClick={()=>{
+                            console.log(task.taskId)
+                            dataRecieved.deleteTask({
+                                taskName: task.taskName,
+                                taskType: task.taskType,
+                                taskId: task.taskId,
+                            }, 'unchecked')
+                        }}>
+                        <i className="fa fa-trash" ></i>
+                    </div>
                     <i className="fa fa-close"></i>
                 </div>
             </div>
@@ -83,7 +92,16 @@ function Dashboard(props) {
                     </div>
                 </div>
                 <div className="delete-task">
-                    <i className="fa fa-trash"></i>
+                    <div className="delete" onClick={()=>{
+                            console.log(task.taskId)
+                            dataRecieved.deleteTask({
+                                taskName: task.taskName,
+                                taskType: task.taskType,
+                                taskId: task.taskId,
+                            }, 'checked')
+                        }}>
+                        <i className="fa fa-trash" ></i>
+                    </div>
                     <i className="fa fa-close"></i>
                 </div>
             </div>
