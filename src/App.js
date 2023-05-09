@@ -222,9 +222,12 @@ function App() {
   useEffect(()=>{
     const preloader = document.querySelector('.preloader')
     window.addEventListener('load', ()=>{
-      console.log('loaded')
       preloader.classList.add('hide')
     })
+    
+    setTimeout(()=>{
+      preloader.classList.add('hide')
+    }, 3000)
   }, [])
 
   return (
