@@ -217,6 +217,10 @@ body{
                     position: relative;
                     cursor: default;
                     @include transitionEase(2s);
+                    @media screen and (max-width: 500px) {
+                        gap: 13px;
+                        padding: 17px;
+                    }
 
                     
                     &:hover, &:focus{
@@ -230,7 +234,8 @@ body{
                     }
 
                     .task-checkbox{
-                        width: 25px;
+                        min-width: 25px;
+                        max-width: 25px;
                         cursor: pointer;
                         height: 25px;
                         border-radius: 7px;
@@ -238,6 +243,12 @@ body{
                         border: 2px solid $secondary-color;
                         @include flexCenter(row);
                         @include transitionEase(0.5s);
+                        @media screen and (max-width: 500px) {
+                            max-width: 20px;
+                            min-width: 20px;
+                            min-height: 20px;
+                            max-height: 20px;
+                        }
 
                         &:hover{
                             border-radius: 50%;
@@ -256,11 +267,19 @@ body{
                         @include flexStart(column);
                         align-items: flex-start;
                         gap: 10px;
+                        width: 100%;
+                        
+                        .task-name{
+                            max-width: calc(100% - 55px);
+                            overflow: scroll;
+                        }
 
                         .task-type{
                             @include flexStart(row);
                             gap: 10px;
                             color: #666;
+                            position: relative;
+                            z-index: 2;
 
                             img{
                                 opacity: 0.9;
