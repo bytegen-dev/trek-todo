@@ -904,6 +904,11 @@ body{
                     img{
                         filter: invert(10);
                     }
+
+                    img[src="img/dream.png"] {
+                        filter: invert(0);
+                    }
+                      
                 }
                 
                 .clear-tasks{
@@ -957,6 +962,8 @@ body{
             }
         }
     }
+
+
 }
 
 
