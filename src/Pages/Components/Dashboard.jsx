@@ -19,7 +19,7 @@ function Dashboard(props) {
         const today = new Date()
         // const day = today.getDay()
         const dateDay = today.getDate()
-        const month = today.getMonth() + 1
+        const month = today.getMonth()
         const year = today.getFullYear()
 
         const months = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
