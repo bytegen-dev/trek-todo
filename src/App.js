@@ -221,6 +221,11 @@ function App() {
   return (
     <LoginContext.Provider value={appData}>
       <div className={appData.darkTheme ? 'container dark' : 'container'}>
+        <div className='preloader'>
+          <div className='preloader-circle'>
+            <div className='preloader-circle-dot'></div>
+          </div>
+        </div>
         <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='/main' element={<Main />}/>
