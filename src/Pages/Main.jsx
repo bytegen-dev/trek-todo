@@ -35,7 +35,7 @@ function Main() {
         showNewTask: true
       })
     })
-    document.getElementById('tasknametemp').focus()
+    // document.getElementById('tasknametemp').focus()
   }
 
   function hideNewTask(){
