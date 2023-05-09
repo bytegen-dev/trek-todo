@@ -943,11 +943,18 @@ body{
                     .content{
                         filter: invert(10);
                     }
+                    
                 }
             }
             
             .new-task-big{
                 filter: invert(10);
+
+                input{
+                    // filter: invert(10);
+                    background-color: transparent;
+                    // color: $primary-color;
+                }
 
                 .closing{
                     opacity: 1 !important;
