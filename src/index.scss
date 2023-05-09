@@ -943,6 +943,36 @@ body{
 
     &.dark{
         background-color: $secondary-color;
+        
+        .preloader{
+            // filter: invert(10);
+            background-color: #000c;
+            animation: none;
+            animation: preloader-hidex 0.8s ease forwards;
+            animation-delay: 2s;
+
+            @keyframes preloader-hidex{
+                0%{
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+                // 0%{
+                //     opacity: 1;
+                //     visibility: visible;
+                // }
+                100%{
+                    transform: translateX(-100vw);
+                    visibility: hidden;
+                }
+            }
+            // background-color: transparent;
+            // background-color: #3d3d64;
+
+            .preloader-circle{
+                filter: invert(10);
+            }
+        }
+
         .main{
 
             .dashboard{
