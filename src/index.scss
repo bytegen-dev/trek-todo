@@ -447,9 +447,6 @@ body{
             right: 0;
             // background-color: $primary-color;
             @include flexCenter(row);
-            // transition-property: transform, opacity, visibility;
-            // transition-duration: 0.5s, 0.5s, 0.5s;
-            // transition-timing-function: ease, ease, ease;
             transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
             // @include transitionEase(0.5s);
             opacity: 0;
@@ -588,6 +585,10 @@ body{
             @include flexCenter(row);
             @include transitionEase(0.5s);
             transform: translateY(110%);
+
+            @media screen and (max-height: 450px) {
+                border-radius: 0px !important;
+            }
     
             height: 50vh;
             min-height: 300px;
