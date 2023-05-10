@@ -116,7 +116,7 @@ function NewTask(props) {
             </div>
             <div className='input-holder'>
                 <label htmlFor="tasknametemp">Task name</label>
-                <input value={newTaskData.taskName} onChange={handleChange} required type="text" id='tasknametemp' maxLength={'50'} />
+                <input value={newTaskData.taskName} onChange={handleChange} required type="text" id='tasknametemp' maxLength={'200'} minLength={'3'} />
             </div>
             <div className='submit'>
                 <div style={{cursor: 'pointer'}} className='exit' onClick={exit}>cancel</div>
