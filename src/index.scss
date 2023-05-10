@@ -447,9 +447,9 @@ body{
             right: 0;
             // background-color: $primary-color;
             @include flexCenter(row);
-            transition-property: transform, opacity;
-            transition-duration: 0.5s, 0.5s;
-            transition-timing-function: ease, ease;
+            transition-property: transform, opacity, visibility;
+            transition-duration: 0.5s, 0.5s, 0.5s;
+            transition-timing-function: ease, ease, ease;
             // @include transitionEase(0.5s);
             opacity: 0;
             visibility: hidden;
