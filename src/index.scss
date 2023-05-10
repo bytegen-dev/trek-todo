@@ -248,11 +248,23 @@ body{
                         gap: 17px !important;
                         .task{
                             max-width: 40vw;
+                            width: 40vw;
+                            height: 40vw;
+                            min-height: 40vw !important;
+                            max-height: 40vw !important;
                             padding-right: 60px !important;
                             overflow: hidden;
 
+                            .task-details{
+                                height: 100% !important;
+                                min-height: 100% !important;
+                            }
+
                             .task-name{
+                                // min-height: 100% !important;
                                 font-size: 15px;
+                                // height: 100%;
+                                word-wrap: break-word;
                                 min-width: 100% !important;
                                 max-width: 100% !important;
                             }
@@ -294,6 +306,7 @@ body{
                     h3{
                         position: relative !important;
                         top: 0 !important;
+                        margin-bottom: 5px !important;
                         text-align: left !important;
                     }
 
@@ -304,6 +317,9 @@ body{
                             max-width: 100% !important;
                             padding-right: 60px !important;
                             overflow: hidden;
+                            height: fit-content;
+                            min-height: 50px !important;
+                            max-height: 200px !important;
                             background-color: transparent;
 
                             .task-name{
