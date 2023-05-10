@@ -143,12 +143,12 @@ function Dashboard(props) {
 
       <div className='tasks-content'>
         {dataRecieved.tasksUnchecked.length >= 1 && <div className="incomplete">
-            <h3>incomplete</h3>
             {unCheckedTasks}
+            <h3>incomplete</h3>
         </div>}
         {dataRecieved.tasksChecked.length >= 1 && <div className="complete">
-            <h3>complete</h3>
             {checkedTasks}
+            <h3>complete</h3>
         </div>}
       </div>
 
