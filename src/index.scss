@@ -54,7 +54,7 @@ body{
     width: 100%;
     background-color: $primary-color;
     
-    .main{
+    .main, .about{
         height: 100%;
         overflow: hidden;
     
@@ -972,7 +972,7 @@ body{
             }
         }
 
-        .main{
+        .main, .about{
 
             .dashboard{
 
@@ -1075,6 +1075,21 @@ body{
 
                 .theme{
                     rotate: 45deg;
+                }
+            }
+        }
+    }
+
+    .about{
+        .content{
+            filter: invert(10);
+            padding: 100px  5vw;
+
+            h2{
+                font-size: 3rem;
+                i{
+                    color: red;
+                    filter: invert(10);
                 }
             }
         }
