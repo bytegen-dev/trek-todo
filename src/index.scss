@@ -447,9 +447,10 @@ body{
             right: 0;
             // background-color: $primary-color;
             @include flexCenter(row);
-            transition-property: transform, opacity, visibility;
-            transition-duration: 0.5s, 0.5s, 0.5s;
-            transition-timing-function: ease, ease, ease;
+            // transition-property: transform, opacity, visibility;
+            // transition-duration: 0.5s, 0.5s, 0.5s;
+            // transition-timing-function: ease, ease, ease;
+            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
             // @include transitionEase(0.5s);
             opacity: 0;
             visibility: hidden;
