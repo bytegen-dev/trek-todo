@@ -245,6 +245,7 @@ body{
 
                 @media screen and (max-width: 450px) {
                     .incomplete, .complete{
+                        gap: 17px !important;
                         .task{
                             max-width: 40vw;
                             padding-right: 60px !important;
