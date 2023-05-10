@@ -101,9 +101,9 @@ function NewTask(props) {
                 <div className="goal" id='religious'>
                     <span>🙏</span> Religious
                 </div>
-                <div className="goal" id='finance'>
+                {/* <div className="goal" id='finance'>
                     <span>💸</span> Finance
-                </div>
+                </div> */}
                 <div className="goal" id='dream'>
                     <span>🌛</span> Dream
                 </div>
