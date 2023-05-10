@@ -57,6 +57,20 @@ body{
     .main, .about{
         height: 100%;
         overflow: hidden;
+
+        .dashboard{
+            animation: pagejump 1s ease forwards;
+
+            @keyframes pagejump {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        
     
         &::before{
             position: fixed;

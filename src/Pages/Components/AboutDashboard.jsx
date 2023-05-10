@@ -11,7 +11,7 @@ function AboutDashboard(props) {
             }}>
                 {/* <img src="img/user.png" alt="dp" />
                 <span>{dataRecieved.user.name}</span> */}
-                Trek<span style={{display: 'none'}}>ToDo</span>_ <img src="img/goal.png" alt="trek-logo" />
+                Trek<span style={{display: 'flex'}}>ToDo</span>_ <img src="img/goal.png" alt="trek-logo" />
                 <i className="fa fa-heart"></i>
             </div>
             <div className="hamburger" onClick={props.showMenu}>

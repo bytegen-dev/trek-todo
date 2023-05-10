@@ -19,8 +19,8 @@ function AboutMenu(props) {
             </div>
         </nav>
         <div className="links-holder">
-            <a href='/'>Dashboard</a>
-            <Link className='active' to={'/about'}>About</Link>
+            <Link to={'/'}>Dashboard</Link>
+            <Link onClick={props.hideMenu} className='active' to={'/about'}>About</Link>
             <Link className='hidden' to={'/install-guide'}>Install App (offline)</Link>
             <Link className='hidden' to={'/collections'}>Collections</Link>
             <Link className='hidden' to={'/settings'}>Settings</Link>
