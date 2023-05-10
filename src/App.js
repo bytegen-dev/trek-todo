@@ -227,7 +227,7 @@ function App() {
     
     setTimeout(()=>{
       preloader.classList.add('hide')
-    }, 3000)
+    }, 100)
   }, [])
 
   return (
