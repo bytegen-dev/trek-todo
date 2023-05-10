@@ -30,6 +30,7 @@ function About() {
     <div className={mainUi.showMenu ? 'show-menu about' : 'about'}>
       <AboutDashboard showMenu={showMenu} hideMenu={hideMenu} />
       <AboutMenu showMenu={showMenu} hideMenu={hideMenu} />
+      <div onClick={hideMenu} className={mainUi.showNewTask?"backdrop show":"backdrop"}></div>
     </div>
   )
 }
