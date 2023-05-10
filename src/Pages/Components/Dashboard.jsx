@@ -164,14 +164,14 @@ function Dashboard(props) {
       </header>
 
       <div className='tasks-content'>
-        <div className="gridtoggleholder">
+        {dataRecieved.tasksUnchecked.length + dataRecieved.tasksChecked.length > 0 && <div className="gridtoggleholder">
             <button onClick={()=>{toggleGridLayout(false)}} className="gridoff">
                 <img src="img/row.png" alt="Rowed" />
             </button>
             <button onClick={()=>{toggleGridLayout(true)}} className="gridon">
                 <img src="img/grid.png" alt="Gridded" />
             </button>
-        </div>
+        </div>}
         {dataRecieved.tasksUnchecked.length >= 1 && <div className="incomplete">
             {unCheckedTasks}
             <h3>incomplete</h3>
