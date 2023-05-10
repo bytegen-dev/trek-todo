@@ -8,6 +8,7 @@
 
 $primary-color: #f2f2f6;
 $secondary-color: #3d3d64;
+$extra-color: #7B7B98;
 $white-color: #fff;
 $blacl-color: #000;
 @mixin flexCenter($direction){
@@ -114,6 +115,188 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            .gridtoggleholder{
+                @include flexCenter(row);
+                // background-color: #fff;
+                // width: 100%;
+                // padding: 15px;
+                border-radius: 100px;
+                overflow: hidden;
+                background-color: $secondary-color;
+                // gap: 10px;
+                margin-top: 30px;
+                // filter: invert(10);
+
+                button{
+                    cursor: pointer;
+                    @include transitionEase(0.5s);
+                    filter: invert(10);
+                    height: 100%;
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    padding: 13px 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0.4;
+                    
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    
+                    &:first-child{
+                        opacity: 1;
+                        border-right: 1px solid rgba($secondary-color, 0.2);
+                    }
+
+                    &:last-child{
+                        border-left: 1px solid rgba($secondary-color, 0.2);
+                    }
+
+                    img{
+                        width: 5vw;
+                        max-width: 25px;
+                        min-width: 20px;
+                    }
+                }
+            }
+            
+            &.gridded{
+                .gridtoggleholder{
+                    @include flexCenter(row);
+                    // background-color: #fff;
+                    // width: 100%;
+                    // padding: 15px;
+                    border-radius: 100px;
+                    overflow: hidden;
+                    background-color: $secondary-color;
+                    // gap: 10px;
+                    margin: 30px 0;
+                    // filter: invert(10);
+    
+                    button{
+                        cursor: pointer;
+                        @include transitionEase(0.5s);
+                        filter: invert(10);
+                        height: 100%;
+                        width: 100%;
+                        background-color: transparent;
+                        border: none;
+                        padding: 13px 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0.4;
+                        
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                        
+                        &:first-child{
+                            border-right: 1px solid rgba($secondary-color, 0.2);
+                        }
+                        
+                        &:last-child{
+                            border-left: 1px solid rgba($secondary-color, 0.2);
+                            opacity: 1;
+                        }
+    
+                        img{
+                            width: 5vw;
+                            max-width: 25px;
+                            min-width: 20px;
+                        }
+                    }
+
+                }
+
+                .incomplete, .complete{
+                    flex-direction: row-reverse !important;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap !important;
+                    h3{
+                        transform: translateX(-7px);
+                        width: 100%;
+                        position: absolute;
+                        top: 25px;
+                        text-align: center;
+                    }
+                    padding-top: 70px !important;
+                    // border: 2px solid;
+
+                    // .tasks-content{
+                    // }
+                    .task{
+                        max-width: fit-content;
+                        // border: 2px solid;
+                        padding-right: 70px !important;
+                        // opacity: 0 !important;
+                        background-color: #bbd0f766;
+                    }
+
+                }
+
+                @media screen and (max-width: 450px) {
+                    .incomplete, .complete{
+                        .task{
+                            max-width: 40vw;
+                            padding-right: 60px !important;
+                            overflow: hidden;
+
+                            .task-name{
+                                font-size: 15px;
+                                min-width: 100% !important;
+                            }
+
+                            .task-type{
+                                img{
+                                    width: 15px !important;
+                                }
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 355px) {
+                    .gridtoggleholder{
+                        display: none;
+                    }
+                    h3{
+                        position: relative !important;
+                        top: 0 !important;
+                        text-align: left !important;
+                    }
+
+                    .incomplete, .complete{
+                        padding-top: 40px !important;
+                        flex-direction: column-reverse !important;
+                        .task{
+                            max-width: 100% !important;
+                            padding-right: 60px !important;
+                            overflow: hidden;
+                            background-color: transparent;
+
+                            .task-name{
+                                font-size: 15px;
+                                min-width: 100% !important;
+                            }
+
+                            .task-type{
+                                img{
+                                    width: 15px !important;
+                                }
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
+            }
     
     
             nav{

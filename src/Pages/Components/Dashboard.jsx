@@ -11,6 +11,12 @@ function Dashboard(props) {
         year: '2023'
     })
 
+    const [gridLayout, setGridLayout] = useState(false)
+
+    function toggleGridLayout(value){
+        setGridLayout(value)
+    }
+
   const dataRecieved = useContext(LoginContext)
 
 
@@ -110,7 +116,7 @@ function Dashboard(props) {
 
 
   return (
-    <div className='dashboard'>
+    <div className={gridLayout ? 'gridded dashboard' : 'dashboard'}>
       <nav className="nav">
         <div className="content">
             <div className="about-user" style={{cursor: 'pointer'}} onClick={()=>{
@@ -142,6 +148,14 @@ function Dashboard(props) {
       </header>
 
       <div className='tasks-content'>
+        <div className="gridtoggleholder">
+            <button onClick={()=>{toggleGridLayout(false)}} className="gridoff">
+                <img src="img/row.png" alt="Rowed" />
+            </button>
+            <button onClick={()=>{toggleGridLayout(true)}} className="gridon">
+                <img src="img/grid.png" alt="Gridded" />
+            </button>
+        </div>
         {dataRecieved.tasksUnchecked.length >= 1 && <div className="incomplete">
             {unCheckedTasks}
             <h3>incomplete</h3>
