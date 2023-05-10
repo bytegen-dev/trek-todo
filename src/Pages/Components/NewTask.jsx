@@ -110,6 +110,9 @@ function NewTask(props) {
                 <div className="goal" id='tech'>
                     <span>{"</>"}</span> Tech
                 </div>
+                <div className="goal" id='shopping'>
+                    <i className='fa fa-cart-shopping'></i> Shop
+                </div>
             </div>
             <div className='input-holder'>
                 <label htmlFor="tasknametemp">Task name</label>
