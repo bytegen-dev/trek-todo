@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { useLayoutEffect } from 'react'
 import { useState } from 'react'
 import LoginContext from '../../Contexts/LoginContext'
+import { useEffect } from 'react'
 
 function Dashboard(props) {
     const [currentDate, setCurrentDate] = useState({
@@ -16,6 +17,21 @@ function Dashboard(props) {
     function toggleGridLayout(value){
         setGridLayout(value)
     }
+
+    useLayoutEffect(()=>{
+        const previousGrid = window.localStorage.getItem('layoutStorage')
+        if (previousGrid === 'true'){
+            setGridLayout(true)
+        } else{
+            setGridLayout(false)
+        }
+    }, [])
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            window.localStorage.setItem('layoutStorage', gridLayout)
+        }, 500)
+    }, [gridLayout])
 
   const dataRecieved = useContext(LoginContext)
 
