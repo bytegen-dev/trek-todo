@@ -233,9 +233,12 @@ body{
                     .task{
                         max-width: fit-content;
                         // border: 2px solid;
-                        padding-right: 70px !important;
+                        padding-right: 60px !important;
                         // opacity: 0 !important;
                         background-color: #bbd0f766;
+                        .task-name{
+                            min-width: 100%;
+                        }
                     }
 
                 }
