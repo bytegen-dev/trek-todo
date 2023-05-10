@@ -1357,6 +1357,11 @@ body{
 
 }
 
+.dark .dashboard.gridded .task{
+    background-color: transparent !important;
+    background-color: #24242625 !important;
+}
+
 
 ::-webkit-scrollbar{
     width: 0px;
