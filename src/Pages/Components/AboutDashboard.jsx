@@ -24,7 +24,21 @@ function AboutDashboard(props) {
         <h2>About Trek_</h2>
         <div className="gold"></div>
         <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nobis quos. Eum assumenda labore corporis aspernatur, ratione autem soluta in voluptate eos voluptatibus vel at architecto atque deserunt, molestias totam vitae quis obcaecati! Placeat atque quasi magnam, accusamus praesentium iusto quam eaque illo nemo facilis natus corporis libero rem labore nisi beatae reprehenderit temporibus earum repellat architecto distinctio aperiam accusantium. Quaerat quidem cum, rerum, sequi consequatur repellat dolores ipsa cupiditate incidunt iste totam! Saepe, libero dolor voluptatum tempora atque nulla culpa at beatae ex provident! Aut aspernatur ullam totam voluptates, illo repellendus optio repudiandae natus, rerum neque consequuntur molestias voluptate!
+            <p>
+                Welcome to Trek - the web app that helps you document your journey to success! With Trek, you can easily keep track of your goals, dreams, prayers, and milestone achievements. We understand that the journey to success can be tough, but with Trek, we make it easier by providing a platform where you can easily document your progress and stay motivated.
+            </p>
+
+            <p>
+                One of the unique features of Trek is that it uses device local storage to store all your data. This means that you don't have to worry about losing your data even when you're offline or when you close the app. With Trek, you can be sure that your data is safe and accessible at all times. Plus, local storage also helps make the app faster and more responsive.
+            </p>
+
+            <p>
+                Trek is designed to be simple and easy to use. With our user-friendly  interface, you can easily add tags to each task to provide more context and make it easier to find them later.                
+            </p>
+
+            <p>
+                At Trek, we believe that success is a journey, and we want to help you make that journey as smooth as possible. So whether you're a student, an entrepreneur, or just someone trying to achieve your goals, Trek is here to help you every step of the way. Start your journey with Trek today and let us help you document your success!
+            </p>
         </span>
         <a href='https://wa.me/+2347035658853'>Connect with Developer <i className="fa fa-arrow-right"></i></a>
       </div>
